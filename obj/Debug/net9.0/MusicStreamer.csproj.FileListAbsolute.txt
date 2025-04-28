@@ -1,0 +1,15 @@
+C:\Users\debor\Documents\projetos\MusicStreamer\bin\Debug\net9.0\MusicStreamer.exe
+C:\Users\debor\Documents\projetos\MusicStreamer\bin\Debug\net9.0\MusicStreamer.deps.json
+C:\Users\debor\Documents\projetos\MusicStreamer\bin\Debug\net9.0\MusicStreamer.runtimeconfig.json
+C:\Users\debor\Documents\projetos\MusicStreamer\bin\Debug\net9.0\MusicStreamer.dll
+C:\Users\debor\Documents\projetos\MusicStreamer\bin\Debug\net9.0\MusicStreamer.pdb
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.AssemblyInfoInputs.cache
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.AssemblyInfo.cs
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.csproj.CoreCompileInputs.cache
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.sourcelink.json
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.dll
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\refint\MusicStreamer.dll
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.pdb
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\MusicStreamer.genruntimeconfig.cache
+C:\Users\debor\Documents\projetos\MusicStreamer\obj\Debug\net9.0\ref\MusicStreamer.dll
