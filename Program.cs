@@ -1,5 +1,5 @@
 ﻿string mensagemDeBoasVindas = "Bem vindo ao Music Stremear!";
-List<string> bandList = new List<string>{"Green Day", "U2", "Nirvana"};
+List<string> bandList = new List<string> { "Green Day", "U2", "Nirvana" };
 
 //PascalCase para funções
 void ExibirLogo()
@@ -51,9 +51,8 @@ void ExibirOpcoesDoMenu()
 void RegistrarBanda()
 {
     Console.Clear();
-    Console.WriteLine("************************");
-    Console.WriteLine("Registro de Bandas:");
-    Console.WriteLine("************************\n");
+    ShowOptionTitle("Registro de Bandas:");
+
     Console.Write("Digite o nome da banda: ");
     string bandName = Console.ReadLine()!;
     bandList.Add(bandName);
@@ -66,20 +65,40 @@ void RegistrarBanda()
 void ListarBandas()
 {
     Console.Clear();
-    Console.WriteLine("************************");
-    Console.WriteLine("Bandas Registradas:");
-    Console.WriteLine("************************\n");
+    ShowOptionTitle("Bandas Registradas:");
 
-    for (int i = 0; i < bandList.Count(); i++)
+    // for (int i = 0; i < bandList.Count(); i++)
+    // {
+    //     Console.WriteLine($"{i + 1}: {bandList[i]}");
+    // }
+
+    int i = 1;
+    foreach (string band in bandList)
     {
-        Console.WriteLine($"{i + 1}: {bandList[i]}");
+        i++;
+        Console.WriteLine($"{i}: {band}");
     }
+
     Console.WriteLine("\n************************");
 
     Console.WriteLine("\nDigite uma tecla para voltar ao meu principal:");
     Console.ReadKey();
     Console.Clear();
     ExibirOpcoesDoMenu();
+}
+
+void ShowOptionTitle(string title)
+{
+    int totalCharacters = title.Length;
+    //string possui funções proprias e propriedades, muito interessante que fique diretamente na tipagem.
+    //usamos ' para caracteres e " para strings
+    //quando usamos o string.Empty dizemos que ela começa vazia, com PadLeft vamos criar uma string com n caracteres x. "Adiciona zeros a esquerda". 
+    string asteriscos = string.Empty.PadLeft(totalCharacters, '*');
+
+    Console.WriteLine(asteriscos);
+    Console.WriteLine(title);
+    Console.WriteLine(asteriscos + "\n");
+
 }
 
 ExibirOpcoesDoMenu();
