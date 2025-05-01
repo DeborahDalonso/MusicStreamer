@@ -1,5 +1,10 @@
 ﻿string mensagemDeBoasVindas = "Bem vindo ao Music Stremear!";
-List<string> bandList = new List<string> { "Green Day", "U2", "Nirvana" };
+
+//Criando dicionario, primeiro a chave e depois os valores ou lista de valores;
+Dictionary<string, List<int>> bands = new Dictionary<string, List<int>>();
+
+bands.Add("Nirvana", new List<int> { 10, 2, 8 });
+bands.Add("U2", new List<int>());
 
 //PascalCase para funções
 void ExibirLogo()
@@ -28,13 +33,13 @@ void ExibirOpcoesDoMenu()
     switch (opcaoNumerica)
     {
         case 1:
-            RegistrarBanda();
+            RegisterBand();
             break;
         case 2:
-            ListarBandas();
+            ListBands();
             break;
         case 3:
-            Console.WriteLine("Você escolheu " + opcao);
+            RateTheBand();
             break;
         case 4:
             Console.WriteLine("Você escolheu " + opcao);
@@ -48,21 +53,22 @@ void ExibirOpcoesDoMenu()
     }
 }
 
-void RegistrarBanda()
+void RegisterBand()
 {
     Console.Clear();
     ShowOptionTitle("Registro de Bandas:");
 
     Console.Write("Digite o nome da banda: ");
     string bandName = Console.ReadLine()!;
-    bandList.Add(bandName);
+    //Assim adicionamos usando dicionario, colocamos a chave primeiro e iniciamos os valore atribuidos a essa chave vazio
+    bands.Add(bandName, new List<int>());
     Console.WriteLine($"A banda {bandName} foi registrada com sucesso!");
     Thread.Sleep(2000);
     Console.Clear();
     ExibirOpcoesDoMenu();
 }
 
-void ListarBandas()
+void ListBands()
 {
     Console.Clear();
     ShowOptionTitle("Bandas Registradas:");
@@ -73,7 +79,8 @@ void ListarBandas()
     // }
 
     int i = 1;
-    foreach (string band in bandList)
+    //usamos a propriedade Keys do dicionario, pq é o que queremos percorrer com o foreach
+    foreach (string band in bands.Keys)
     {
         i++;
         Console.WriteLine($"{i}: {band}");
@@ -87,6 +94,13 @@ void ListarBandas()
     ExibirOpcoesDoMenu();
 }
 
+void RateTheBand()
+{
+    Console.Clear();
+    ShowOptionTitle("Avalie uma banda:");
+}
+
+//Code Smell: O código funciona mas daquele jeitinho,por isso refatoramos o código pra ter essa função e evitar repetição de uma parte do código
 void ShowOptionTitle(string title)
 {
     int totalCharacters = title.Length;
